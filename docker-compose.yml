@@ -1,0 +1,13 @@
+version: "2"
+services:
+  app:
+    container_name: customer-menu
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile-dev
+    volumes:
+      - ./:/go/src/github.com/anhhuy1010/customer-menu
+    ports:
+      - 8006:8006
+      - 5006:5006
+
