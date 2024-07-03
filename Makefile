@@ -15,3 +15,8 @@ proto-user:
 		-I /usr/include \
 		--go_out=paths=source_relative,plugins=grpc:grpc/proto/user/ \
 		grpc/proto/user/user.proto
+proto-product:
+	protoc -I grpc/proto/product/ \
+		-I /usr/include \
+		--go_out=paths=source_relative,plugins=grpc:grpc/proto/product/ \
+		grpc/proto/product/product.proto
