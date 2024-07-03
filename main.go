@@ -8,6 +8,7 @@ import (
 	"github.com/anhhuy1010/customer-menu/config"
 	"github.com/anhhuy1010/customer-menu/database"
 	grpcClient "github.com/anhhuy1010/customer-menu/grpc"
+	pbProduct "github.com/anhhuy1010/customer-menu/grpc/proto/product"
 	pbUser "github.com/anhhuy1010/customer-menu/grpc/proto/user"
 	"github.com/anhhuy1010/customer-menu/grpc/service"
 	"github.com/anhhuy1010/customer-menu/routes"
@@ -82,6 +83,7 @@ func StartGRPC(port string) error {
 	// register service
 	server = grpc.NewServer()
 	pbUser.RegisterUserServer(server, service.NewUserServer())
+	pbProduct.RegisterProductServer(server, service.NewProductServer())
 
 	// start gRPC server
 	fmt.Println("starting gRPC server... port: ", port)

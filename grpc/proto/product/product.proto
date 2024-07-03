@@ -1,0 +1,24 @@
+syntax ="proto3";
+option go_package ="../product";
+package product;
+service Product{
+    rpc Detail(DetailRequest) returns (DetailResponse);
+}
+message DetailRequest{
+    string uuid = 1;
+    string date = 2;
+}
+message DetailResponse{
+    string uuid = 1;
+    string image = 2;
+    int32 sequence = 3;
+    int32 quantity = 4;
+    string description = 5;
+    repeated string gallery = 6;
+    int32 is_active = 7;
+    int32 is_delete = 8;
+    string start_date = 9;
+    string end_date = 10;
+    string created_at = 11;
+    string updated_at = 12;
+}
