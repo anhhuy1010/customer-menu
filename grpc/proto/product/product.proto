@@ -21,4 +21,5 @@ message DetailResponse{
     string end_date = 10;
     string created_at = 11;
     string updated_at = 12;
+    string name = 13;
 }

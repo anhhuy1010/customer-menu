@@ -43,6 +43,7 @@ func (s *ProductService) Detail(ctx context.Context, req *pb.DetailRequest) (*pb
 	res := &pb.DetailResponse{
 		Uuid:        result.Uuid,
 		Image:       result.Image,
+		Name:        result.Name,
 		Sequence:    int32(result.Sequence),
 		Quantity:    int32(result.Sequence),
 		Description: result.Description,
