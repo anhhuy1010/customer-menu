@@ -22,4 +22,5 @@ message DetailResponse{
     string created_at = 11;
     string updated_at = 12;
     string name = 13;
+    double price = 14;
 }
