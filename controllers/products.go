@@ -76,7 +76,7 @@ func (productClt ProductController) Detail(c *gin.Context) {
 	productt, err := productModel.FindOne(condition)
 	if err != nil {
 		fmt.Println(err.Error())
-		c.JSON(http.StatusOK, respond.ErrorCommon("Product no found!"))
+		c.JSON(http.StatusBadRequest, respond.ErrorCommon("Product no found!"))
 		return
 	}
 
